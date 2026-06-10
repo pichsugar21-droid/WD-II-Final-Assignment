@@ -343,9 +343,12 @@ document.getElementById('productSearch')?.addEventListener('input', function() {
 
 document.getElementById('reportSearch')?.addEventListener('input', function() {
   const term = this.value.toLowerCase();
-  const filtered = transactions.filter(t => 
-    t.date.includes(term) || t.items.some(i => i.name.toLowerCase().includes(term))
+
+  const filtered = transactions.filter(t =>
+    t.date.toLowerCase().includes(term) ||
+    t.items.some(i => i.name.toLowerCase().includes(term))
   );
+
   renderTransactions(filtered);
 });
 
