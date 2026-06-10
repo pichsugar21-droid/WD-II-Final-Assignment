@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Reports</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div style="max-width: 1200px; margin: 20px auto; padding: 20px;">
+        <h2>Transaction History & Reports</h2>
+        
+        <div style="margin-bottom: 15px; background:#f8f9fa; padding:15px; border-radius:8px;">
+            <strong>Filter by Date:</strong><br><br>
+            <label>From: </label>
+            <input type="date" id="fromDate" style="padding:8px;">
+            
+            <label style="margin-left:20px;">To: </label>
+            <input type="date" id="toDate" style="padding:8px;">
+            
+            <button onclick="filterByDate()" class="btn btn-outline-primary" style="margin-left:15px;">Search</button>
+            <button onclick="resetDateFilter()" class="btn btn-outline-primary">Reset</button>
+            
+            <div style="margin-top:10px;">
+                <input type="text" id="reportSearch" placeholder="Search transactions..." style="width:300px; padding:10px;">
+                <button class="btn btn-outline-primary" onclick="printAllReport()">Print All Report</button>
+                <button class="btn btn-outline-primary" onclick="clearHistory()" style="background:#dc3545; color:white;">Clear History</button>
+                <button class="btn btn-outline-primary" onclick="window.close()">← Back to Sales</button>
+            </div>
+        </div>
+
+        <div id="transaction-list"></div>
+    </div>
+
+    <script src="js/backend.js"></script>
+</body>
+</html>

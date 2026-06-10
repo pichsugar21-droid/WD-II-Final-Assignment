@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+}
+.col-7 {
+  width: 50%;
+  margin: 10px;
+}
+.col-5 {
+  width: 41.67%;
+  margin: 10px;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 9px;
+  background-color: aliceblue;
+}
+.product-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.cart {
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  padding: 16px;
+  background-color: aliceblue;
+}
+.cart-total {
+  font-weight: bold;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.btn {
+  padding: 4px 8px;
+  margin: 0 4px;
+}
+.btn-outline-primary {
+  border: 1px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+}
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+@media print {
+    .container, .col-7, .product-list, .btn, 
+    #productSearch, #reportSearch {
+        display: none !important;
+    }
+
+    .cart {
+        display: block !important;
+        border: none;
+        background: linear-gradient(135deg, #ff00cc, #ff9900);
+        color: white;
+        padding: 30px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .cart h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: white;
+        color: black;
+    }
+    
+    th, td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #333;
+        color: white;
+    }
+    
+    .cart-total {
+        font-size: 24px;
+        text-align: right;
+        margin-top: 20px;
+        display: block;
+    }
+
+    
+    .report-section {
+        display: block !important;
+        background: white;
+        color: black;
+        padding: 20px;
+        margin-top: 30px;
+        border: 2px solid #333;
+    }
+    
+    .report-section h2 {
+        text-align: center;
+        color: #333;
+    }
+    
+    #transaction-list {
+        display: block !important;
+    }
+    
+    .transaction-list > div {
+        border: 1px solid #333;
+        padding: 15px;
+        margin-bottom: 20px;
+        background: #f9f9f9;
+        page-break-inside: avoid;
+    }
+}

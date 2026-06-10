@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThongPich Mart</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="col-7">
+      
+            <h1 style="font-family: 'Poppins' " align="center">ThongPich Mart</h1>
+            <h2>
+                <input type="text" id="productSearch" placeholder="Search products..." style="padding:8px; width:250px; color:rgb(0, 85, 255);">
+            </h2>
+            <div class="product-list"></div>
+        </div>
+        <div class="col-5">
+            <div class="cart">
+                <h2>Cart</h2>
+               
+                <div style="margin-bottom: 15px;">
+                    <button class="btn btn-outline-primary" onclick="saveCartManually()"> Save Cart</button>
+                    <button class="btn btn-outline-primary" onclick="loadCartManually()"> Load Cart</button>
+                    <button class="btn btn-outline-primary" onclick="completeSale()" style="background:#00d0ff; color:white;"> Print Receipt</button>
+                    <button class="btn btn-outline-primary" onclick="viewReports()" style="background:#00ff00; color:white;">View Reports</button>
+                </div>
+                <table class="table" id="cart">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cart-items"></tbody>
+                </table>
+                <p>Total: $<span class="cart-total">0.00</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/backend.js"></script>
+</body>
+</html>
